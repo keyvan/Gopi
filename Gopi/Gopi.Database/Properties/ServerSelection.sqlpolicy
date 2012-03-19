@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns="http://schemas.serviceml.org/smlif/2007/02">
+  <identity>
+    <name>urn:uuid:96fe1236-abf6-4a57-b54d-e9baab394fd1</name>
+    <baseURI>http://documentcollection/</baseURI>
+  </identity>
+  <definitions xmlns:sfc="http://schemas.microsoft.com/sqlserver/sfc/serialization/2007/08" xmlns="http://schemas.serviceml.org/smlif/2007/02">
+    <document>
+      <docinfo>
+        <aliases>
+          <alias>/system/schema/DMF</alias>
+        </aliases>
+        <sfc:version DomainVersion="3" />
+      </docinfo>
+      <data>
+        <xs:schema targetNamespace="http://schemas.microsoft.com/sqlserver/DMF/2007/08" xmlns:sfc="http://schemas.microsoft.com/sqlserver/sfc/serialization/2007/08" xmlns:sml="http://schemas.serviceml.org/sml/2007/02" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+          <xs:element name="Policy">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:any namespace="http://schemas.microsoft.com/sqlserver/DMF/2007/08" processContents="skip" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Condition">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:any namespace="http://schemas.microsoft.com/sqlserver/DMF/2007/08" processContents="skip" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+      </data>
+    </document>
+  </definitions>
+  <instances xmlns:sfc="http://schemas.microsoft.com/sqlserver/sfc/serialization/2007/08" xmlns="http://schemas.serviceml.org/smlif/2007/02">
+    <document>
+      <docinfo>
+        <aliases>
+          <alias>/PolicyStore/Policy/Server Selection Policy</alias>
+        </aliases>
+        <sfc:version DomainVersion="3" />
+      </docinfo>
+      <data>
+        <DMF:Policy xmlns:DMF="http://schemas.microsoft.com/sqlserver/DMF/2007/08" xmlns:sfc="http://schemas.microsoft.com/sqlserver/sfc/serialization/2007/08" xmlns:sml="http://schemas.serviceml.org/sml/2007/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+          <DMF:Parent>
+            <sfc:Reference sml:ref="true">
+              <sml:Uri>/PolicyStore</sml:Uri>
+            </sfc:Reference>
+          </DMF:Parent>
+          <DMF:PolicyCondition>
+            <sfc:Reference sml:ref="true">
+              <sml:Uri>/PolicyStore/Condition/IServerSelectionFacetCondition</sml:Uri>
+            </sfc:Reference>
+          </DMF:PolicyCondition>
+          <DMF:Name type="string">Server Selection Policy</DMF:Name>
+          <DMF:Condition type="string">IServerSelectionFacetCondition</DMF:Condition>
+          <DMF:ActiveEndDate type="dateTime">0001-01-01T00:00:00</DMF:ActiveEndDate>
+          <DMF:ActiveStartDate type="dateTime">0001-01-01T00:00:00</DMF:ActiveStartDate>
+        </DMF:Policy>
+      </data>
+    </document>
+    <document>
+      <docinfo>
+        <aliases>
+          <alias>/PolicyStore/Condition/IServerSelectionFacetCondition</alias>
+        </aliases>
+        <sfc:version DomainVersion="3" />
+      </docinfo>
+      <data>
+        <DMF:Condition xmlns:DMF="http://schemas.microsoft.com/sqlserver/DMF/2007/08" xmlns:sfc="http://schemas.microsoft.com/sqlserver/sfc/serialization/2007/08" xmlns:sml="http://schemas.serviceml.org/sml/2007/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+          <DMF:Parent>
+            <sfc:Reference sml:ref="true">
+              <sml:Uri>/PolicyStore</sml:Uri>
+            </sfc:Reference>
+          </DMF:Parent>
+          <DMF:Name type="string">IServerSelectionFacetCondition</DMF:Name>
+          <DMF:Description type="string" />
+          <DMF:Facet type="string">IServerSelectionFacet</DMF:Facet>
+        </DMF:Condition>
+      </data>
+    </document>
+  </instances>
+</model>
