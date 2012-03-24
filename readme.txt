@@ -13,5 +13,4 @@ stored in storage system using XML format.
 The implementaiton is described in details on my blog:
 
 http://keyvan.io/gopi-smtp-component-for-net-2-0
-http://keyvan.io/how-to-serialize-a-mailmessage
 http://keyvan.io/gopi-2-0-released
